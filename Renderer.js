@@ -1,12 +1,5 @@
 
 class Renderer {
-    
-    contrcutor() {
-        this.usersData = null
-        this.kanyeQuote = null
-        this.pokemonData = null
-        this.randomText = null
-    }
 
     renderMainProfile (mainUser) {
         let source = $('#user-info').html()
