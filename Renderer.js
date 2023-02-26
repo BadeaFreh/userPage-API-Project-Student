@@ -2,9 +2,9 @@
 class Renderer {
 
     renderMainProfile (mainUser) {
-        let source = $('#user-info').html()
-        let template = Handlebars.compile(source)
-        let newHTML = template({
+        const source = $('#user-info').html()
+        const template = Handlebars.compile(source)
+        const newHTML = template({
             firstName: mainUser.firstName,
             lastName: mainUser.lastName,
             state: mainUser.state,
