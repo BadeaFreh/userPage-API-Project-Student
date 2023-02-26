@@ -51,4 +51,12 @@ class Renderer {
         })
         $('.meat-container').append(newHTML)
     }
+
+    emptyDataElements () {
+        $(".user-container").empty()
+        $(".friends-container").empty()
+        $(".quote-container").empty()
+        $(".pokemon-container").empty()
+        $(".meat-container").empty()
+    }
 }
