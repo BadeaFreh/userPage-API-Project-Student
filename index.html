@@ -1,67 +1,70 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Random User Page Generator</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Nunito"
+      rel="stylesheet"/>
+    <link
+      href="https://fonts.googleapis.com/css?family=Indie+Flower"
+      rel="stylesheet"/>
     <link rel="stylesheet" type="text/css" media="screen" href="styles.css" />
+  </head>
 
-</head>
-
-<body>
-    <div class="container">	
-        <div class="user-container"></div>
-        <div class="quote-container"></div>
-        <div class="content-container">
-            <div class="pokemon-container"></div>
-            <div class="meat-container"></div>
-        </div>
-        <div class="friends">
-            <h4>Friends</h4>
-            <div class="friends-container"></div>
-        </div>	
-        <div class="buttons">	
-            <button>Load User Data</button>	
-            <button class="generate-user-btn">Display User</button>	
-        </div>	
+  <body>
+    <div class="container">
+      <div class="user-container"></div>
+      <div class="quote-container"></div>
+      <div class="content-container">
+        <div class="pokemon-container"></div>
+        <div class="meat-container"></div>
+      </div>
+      <div class="friends">
+        <h4>Friends</h4>
+        <div class="friends-container"></div>
+      </div>
+      <div class="buttons">
+        <button>Load User Data</button>
+        <button class="generate-user-btn">Display User</button>
+      </div>
     </div>
 
     <script id="user-info" type="text/x-handlebars-template">
-        <div>
-            <img id="profile-pic" src="{{imageURL}}" alt="">
-            <div class="user-info">
-                <span>{{firstName}} {{lastName}}</span><br>
-                <span>{{state}}, {{city}}</span>
-            </div>
+      <div>
+        <img id="profile-pic" src="{{imageURL}}" alt="" />
+        <div class="user-info">
+          <span>{{firstName}} {{lastName}}</span><br />
+          <span>{{state}}, {{city}}</span>
         </div>
+      </div>
     </script>
 
     <script id="favorite-quote" type="text/x-handlebars-template">
-        <div>
-            <p>Favorite Quote: </p>
-            <p>{{quote}}</p>
-        </div>
+      <div>
+        <p>Favorite Quote: </p>
+        <p>{{quote}}</p>
+      </div>
     </script>
 
     <script id="pokemon-info" type="text/x-handlebars-template">
-        <img src="{{pokemonImage}}" alt="pokemon image" id="pokemon-image">
-        <span id="pokemon-text">Favorite Pokemon: {{pokemonName}}</span>
+      <img src="{{pokemonImage}}" alt="pokemon image" id="pokemon-image" />
+      <span id="pokemon-text">Favorite Pokemon: {{pokemonName}}</span>
     </script>
 
     <script id="about-me" type="text/x-handlebars-template">
-        <div class="meat-text">
-            <div>About me: </div>
-            <div>{{randomText}}</div>
-        </div>
+      <div class="meat-text">
+        <div>About me: </div>
+        <div>{{meatRandomText}}</div>
+      </div>
     </script>
-    
+
     <script id="render-friends" type="text/x-handlebars-template">
-        <div>
-            <span>{{firstName}} {{lastName}}</span>
-        </div>
+      <div>
+        <span>{{firstName}} {{lastName}}</span>
+      </div>
     </script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
@@ -69,5 +72,5 @@
     <script src="APIManager.js"></script>
     <script src="Renderer.js"></script>
     <script src="main.js"></script>
-</body>
+  </body>
 </html>

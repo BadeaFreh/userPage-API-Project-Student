@@ -14,11 +14,11 @@ class Renderer {
         $('.user-container').append(newHTML)
     }
 
-    renderFriendsList (friendsArray) {
-        let source = $('#render-friends').html()
-        let template = Handlebars.compile(source)
-        for (let user of friendsArray) {
-            let newHTML = template({
+    renderFriendsList (friends) {
+        const source = $('#render-friends').html()
+        const template = Handlebars.compile(source)
+        for (let user of friends) {
+            const newHTML = template({
                 firstName: user.firstName,
                 lastName: user.lastName
             })
@@ -27,36 +27,28 @@ class Renderer {
     }
 
     renderFavoriteQuote (kanyeQuote) {
-        let source = $('#favorite-quote').html()
-        let template = Handlebars.compile(source)
-        let newHTML = template({quote: kanyeQuote})
+        const source = $('#favorite-quote').html()
+        const template = Handlebars.compile(source)
+        const newHTML = template({quote: kanyeQuote})
         $('.quote-container').append(newHTML)
     }
 
     renderPokemonInfo (pokemonData) {
-        let source = $('#pokemon-info').html()
-        let template = Handlebars.compile(source)
-        let newHTML = template({
+        const source = $('#pokemon-info').html()
+        const template = Handlebars.compile(source)
+        const newHTML = template({
             pokemonName: pokemonData.name,
             pokemonImage: pokemonData.image
         })
         $('.pokemon-container').append(newHTML)
     }
 
-    renderMeatText (meatText) {
-        let source = $('#about-me').html()
-        let template = Handlebars.compile(source)
-        let newHTML = template({
-            randomText: meatText
+    renderMeatRandomText (randomText) {
+        const source = $('#about-me').html()
+        const template = Handlebars.compile(source)
+        const newHTML = template({
+            meatRandomText: randomText
         })
         $('.meat-container').append(newHTML)
-    }
-
-    renderAll (mainUser, friendsArray, kanyeQuote, pokemonData, meatText) {
-        renderMainProfile(mainUser)
-        renderFriendsList(friendsArray)
-        renderFavoriteQuote (kanyeQuote)
-        renderPokemonInfo (pokemonData)
-        renderMeatText (meatText)
     }
 }
