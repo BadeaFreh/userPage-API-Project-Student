@@ -41,7 +41,7 @@ class APIManager {
             })
   }
 
-  _geKanyetRandomQuote() {
+  _geKanyeRandomQuote() {
     return $.get(KANYE_QUOTES_API)
             .then(kanyeQuoteResponse => {
               let kanyeQuote = kanyeQuoteResponse.quote
@@ -78,7 +78,7 @@ class APIManager {
   loadData () {
     renderer.emptyDataElements()
     let randomUsers = this._getRandomUsers()
-    let randomKanyeQuote = this._geKanyetRandomQuote()
+    let randomKanyeQuote = this._geKanyeRandomQuote()
     let randomPokemon = this._getRandomPokemon()
     let meatRandomText = this._getMeatRandomText()
     return Promise.all([randomUsers, randomKanyeQuote, randomPokemon, meatRandomText])
