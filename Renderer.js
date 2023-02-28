@@ -1,7 +1,6 @@
-
 class Renderer {
 
-    renderMainProfile (mainUser) {
+    renderMainProfile(mainUser) {
         const source = $('#user-info').html()
         const template = Handlebars.compile(source)
         const newHTML = template({
@@ -14,7 +13,7 @@ class Renderer {
         $('.user-container').append(newHTML)
     }
 
-    renderFriendsList (friends) {
+    renderFriendsList(friends) {
         const source = $('#render-friends').html()
         const template = Handlebars.compile(source)
         for (let user of friends) {
@@ -26,14 +25,16 @@ class Renderer {
         }
     }
 
-    renderFavoriteQuote (kanyeQuote) {
+    renderFavoriteQuote(kanyeQuote) {
         const source = $('#favorite-quote').html()
         const template = Handlebars.compile(source)
-        const newHTML = template({quote: kanyeQuote})
+        const newHTML = template({
+            quote: kanyeQuote
+        })
         $('.quote-container').append(newHTML)
     }
 
-    renderPokemonInfo (pokemonData) {
+    renderPokemonInfo(pokemonData) {
         const source = $('#pokemon-info').html()
         const template = Handlebars.compile(source)
         const newHTML = template({
@@ -43,7 +44,7 @@ class Renderer {
         $('.pokemon-container').append(newHTML)
     }
 
-    renderMeatRandomText (randomText) {
+    renderMeatRandomText(randomText) {
         const source = $('#about-me').html()
         const template = Handlebars.compile(source)
         const newHTML = template({
@@ -52,7 +53,7 @@ class Renderer {
         $('.meat-container').append(newHTML)
     }
 
-    emptyDataElements () {
+    emptyDataElements() {
         $(".user-container").empty()
         $(".friends-container").empty()
         $(".quote-container").empty()
